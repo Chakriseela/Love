@@ -1,0 +1,98 @@
+<!-- love-letter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Letter to You, Ishika ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="love-letter">
+        <h1>Dear Ishika,</h1>
+        <p>
+            From the moment you walked into my life, everything changed. Your smile brightens my days,
+            your laughter is the sweetest melody, and your kindness warms my heart like the first rays of sunrise.
+            Every moment with you feels magical, and every thought of you fills my heart with joy.
+        </p>
+        <p>
+            I want to walk beside you in this journey of life, cherish every moment, and make countless memories together.
+            You are my little princess, my darling, my sweet angel, and my everything. I love you beyond words, and today,
+            on this special day, I just want to ask… will you be mine forever? ❤️
+        </p>
+        <p>
+            With all my heart,
+            <br>
+            Yours always, Chakravarthi
+        </p>
+    </div>
+    <button onclick="goBack()">⬅️ Back</button>
+    
+    <script>
+        function goBack() {
+            window.location.href = "Darling.html";
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    body {
+        background: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/romantic-love-date-at-sunset-free-photo.jpeg?w=2210&quality=70') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        position: relative;
+        backdrop-filter: blur(5px);
+    }
+
+    .confession, .love-letter {
+        font-size: 22px;
+        color: #ff6b81;
+        font-weight: 600;
+        text-align: center;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .hidden-message {
+        font-size: 24px;
+        color: #fff;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        padding: 18px;
+        border-radius: 15px;
+        display: none;
+        margin-top: 20px;
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+        text-align: center;
+        font-weight: 500;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #ff6b81, #ff7eb3);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 12px;
+        transition: all 0.3s;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #ff7eb3, #ff6b81);
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(255, 20, 147, 0.3);
+    }
+</style>

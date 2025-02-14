@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Ishika ❤️</title>
+    <style>
+        body {
+    background: url('https://i.pinimg.com/736x/e1/a9/d7/e1a9d7206162a262ceaed4572191d10b.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(0px);
+}
+
+.confession {
+    font-size: 22px;
+    color: #ff6b81;
+    font-weight: 600;
+    text-align: center;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden-message {
+    font-size: 24px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 18px;
+    border-radius: 15px;
+    display: none;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+    text-align: center;
+    font-weight: 500;
+}
+
+.heart {
+    position: absolute;
+    color: rgba(255, 20, 147, 0.7);
+    font-size: 18px;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.3); opacity: 0; }
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6b81, #ff7eb3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 12px;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff6b81);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 20, 147, 0.3);
+}
+
+.next-page-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff6b81, #ff7eb3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.next-page-btn:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff6b81);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 20, 147, 0.3);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="confession" id="confession"></div>
+    <button onclick="revealMessage()">Tap for a Surprise 💖</button>
+    <div class="hidden-message" id="hiddenMessage">Ishika, you are the most special person in my life! my little spark of magic, my sweetest blessing, my heart’s favorite melody. 💞👑</div>
+    <button class="next-page-btn" onclick="goToNextPage()">Next Page ➡️</button>
+    <script>
+        const text = "Ishika, from the moment I met you, my world has been brighter. You are my happiness, my inspiration, and my dream. My little princess, my darling, my sweety, my everything. I want to say... I TRULY LOVE you with all my heart! ❤️👸🤴👑👑🫂🫂🫂";
+        let index = 0;
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("confession").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+        
+        function revealMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+        
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            document.body.appendChild(heart);
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 300);
+        function goToNextPage() {
+            window.location.href = "love-letter.html";
+        }
+    </script>
+</body>
+</html>
